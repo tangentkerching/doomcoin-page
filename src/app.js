@@ -19,7 +19,12 @@ app.get('',(req, res) => {
     res.render('index')
 })
 
+app.get('*', function(req, res){
+    res.status(404).render('404');
+});
+
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server is up on port 3000')
 })
+
