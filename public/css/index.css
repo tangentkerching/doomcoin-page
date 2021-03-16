@@ -1,41 +1,70 @@
 @font-face {
     font-family: 'doom';
-    src:  url('../fonts/doom.ttf') format('truetype');
+    src: url('../fonts/doom.ttf') format('truetype');
 }
 
-.section{
+.section {
     overflow: hidden !important;
 }
 
 
-body{
+body {
     font-family: 'doom';
 }
 
-nav{
-    background-color: transparent;
-}
-
-#enter{
+#enter {
     font-size: 2rem;
-    color: #FC1E1C;
     border: none;
     padding: 0;
     background: none;
+    text-align: center;
+
+    background: linear-gradient(to right, #FFF 20%, #FAD03A 40%, #FAD03A 60%, #FFF 80%);
+    background-size: 200% auto;
+
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 1s linear infinite;
+
+    @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+    }
 }
 
-#enter:hover{
-    color: #47ff22;
+#enter:hover {
+    color: #FFFF00;
 }
 
-.nav-link{
-    color: #47ff22 !important;
+
+
+.highlight2 {
+    color: #ffff00;
     text-shadow:
-       3px 3px 0 #370506,
-     -1px -1px 0 #370506,  
-      1px -1px 0 #370506,
-      -1px 1px 0 #370506,
-       1px 1px 0 #370506;
+        3px 3px 0 #370506,
+        -1px -1px 0 #370506,
+        1px -1px 0 #370506,
+        -1px 1px 0 #370506,
+        1px 1px 0 #370506;
+}
+
+.highlight2:hover {
+    color: #FCFCA5;
+
+}
+
+.nav-link {
+    color: #FAD03A !important;
+    text-shadow:
+        3px 3px 0 #370506,
+        -1px -1px 0 #370506,
+        1px -1px 0 #370506,
+        -1px 1px 0 #370506,
+        1px 1px 0 #370506;
 }
 
 .vimeo-wrapper {
@@ -47,115 +76,126 @@ nav{
     z-index: -1;
     pointer-events: none;
     overflow: hidden;
- }
- .vimeo-wrapper iframe {
+}
+
+.vimeo-wrapper iframe {
     width: 100vw;
-    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    height: 56.25vw;
+    /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
     min-height: 100vh;
-    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    min-width: 177.77vh;
+    /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
- }
-
- .highlight{
-     color: red;
- }
-
- .highlight:hover{
-    color: #47ff22;
 }
 
-.text-container{
-    background-color: rgba(71,0,0,0.9);
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.8);
+.highlight {
+    color: #FAD03A;
+}
+
+.highlight:hover {
+    color: #f7ecc5;
+}
+
+.text-container {
+    background-color: rgba(213,122,20,0.9);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
     border-radius: 0%;
 }
 
 .headshot {
-	border: calc(8px + 0.2vw) solid transparent;
-	background-clip: content-box, border-box;
-	background-size: cover;
-	box-sizing: border-box;
-	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    border: calc(8px + 0.2vw) solid transparent;
+    background-clip: content-box, border-box;
+    background-size: cover;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .headshot-1 {
-	background-image: var(--img-url), linear-gradient(#f9f047, #0fd850);
+    background-image: var(--img-url), linear-gradient(#f9f047, #0fd850);
 }
 
-#section2{
-    background-image:  url('../img/doomfanart2.jpg');
+#section2 {
+    background-image: url('../img/doomfanart2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#section4{
-    background-image:  url('../img/doompurgatory.jpeg');
+#section3 {
+    background-image: url('../img/tokenomics.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#section5{
-    background-image:  url('../img/background.jpeg');
+#section4 {
+    background-image: url('../img/doompurgatory.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.nooverflow{
+#section5 {
+    background-image: url('../img/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-box {
+    background-color: rgba(27, 134, 189, 0.9);
+    border-radius: 2%;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nooverflow {
     overflow: none;
 }
 
-nav{
-   width: 100%;
-   position: fixed !important;
-   top: 0;
-   z-index: 100;
+nav {
+    width: 100%;
+    position: fixed !important;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(29,63,103,0.5);
 }
 
-#logo{
+#logo {
     width: 80px;
 }
 
 
 
- @media (max-width: 575.98px) {
-    #epic-description{
+@media (max-width: 575.98px) {
+    #epic-description {
         font-size: 1rem;
     }
-    #logo{
+
+    #logo {
         width: 80px;
     }
- }
-  
- @media (min-width: 576px) and (max-width: 767.98px) {
-    #epic-description{
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #epic-description {
         font-size: 1rem;
     }
- }
- 
- @media (min-width: 768px) and (max-width: 991.98px) {
-    #epic-description{
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #epic-description {
         font-size: 1rem;
     }
- }
- 
- @media (min-width: 992px) and (max-width: 1199.98px) {
-    #epic-description{
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #epic-description {
         font-size: 2rem;
     }
- }
- 
- @media (min-width: 1200px) {
-    #epic-description{
+}
+
+@media (min-width: 1200px) {
+    #epic-description {
         font-size: 2rem;
     }
 
- }
-
-
-
- 
-
- 
+}

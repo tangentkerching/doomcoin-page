@@ -4,7 +4,8 @@ $(document).ready(function () {
     var dsgetpow = $("#dsgetpow")[0];
 
     $('#pagepiling').pagepiling({
-        verticalCentered: false
+        verticalCentered: false,
+        scrollingSpeed: 10
     });
 
     $('#enter').on('click', function () {
